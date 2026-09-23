@@ -1,0 +1,195 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+
+    background: #f4f4f4;
+    color: #222;
+}
+
+.container {
+    
+    /* width: 95%; */
+    min-width: 300px;
+    width: min(500px, 92%);
+    padding: 25px;
+
+    background: white;
+
+    border-radius: 16px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+    text-align: center;
+}
+
+.configuration {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.configuration label {
+    font-weight: 600;
+}
+
+.configuration .box {
+    display: flex;
+    align-items: left;
+    width: 230px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.configuration input {
+    outline: none;
+    border: none;
+    background-color: #dddddd;
+    height: 30px;
+    width: 120px;
+    border-radius: 5px;
+    padding: 0px 10px;
+}
+
+h1 {
+    margin: 0 0 8px;
+}
+
+.subtitle {
+    margin: 0 0 25px;
+    color: #666;
+}
+
+.upload-box {
+    padding: 25px;
+    border: 2px dashed #ccc;
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+#imageInput {
+    display: none;
+}
+
+.upload-box label {
+    padding: 12px 20px;
+    background: #222;
+    color: white;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+#fileName {
+    color: #777;
+    font-size: 14px;
+}
+
+.preview-container {
+    /* position: relative; */
+    margin: 25px auto;
+    max-width: 500px;
+    /* max-height: 400px; */
+    max-height: 300px;
+    height: 300px;
+
+    display: none;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+}
+
+#previewImage {
+    position: relative;
+    display: block;
+    justify-self: center;
+    height: 100%;
+    object-fit: cover;
+}
+
+#faceCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 50%;
+    height: 50%;
+
+    pointer-events: none;
+}
+
+#detectButton {
+    width: 50%;
+    min-width: 150px;
+    padding: 14px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #0066ff;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    margin-top: 20px;
+}
+
+#detectButton:hover {
+    background: #0052cc;
+}
+
+#detectButton:disabled {
+    background: #aaa;
+    cursor: not-allowed;
+}
+
+#status {
+    margin-top: 20px;
+
+    font-size: 14px;
+
+    color: #666;
+}
+
+#result {
+    margin-top: 15px;
+
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* Tablet */
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+    margin: 0 auto;
+}
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .container {
+        width: 600px;
+  }
+}

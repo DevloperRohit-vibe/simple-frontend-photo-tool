@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Face Detection Test</title>
+
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+
+<main class="container">
+
+    <div class="configuration">
+        <div class="ipBox box">
+            <label for="ip">IP Address : </label>
+            <input type="text" id="ip">
+        </div>
+        <div class="portBox box">
+            <label for="port">PORT : </label>
+            <input type="text" id="port">
+        </div>
+    </div>
+
+    <h1>Face Detection Test</h1>
+
+    <p class="subtitle">
+        Upload an image and detect faces using OpenCV.
+    </p>
+
+    <div class="upload-box">
+
+        <input
+            type="file"
+            id="imageInput"
+            accept="image/*"
+        >
+
+        <label for="imageInput">
+            Choose Image
+        </label>
+
+        <span id="fileName">
+            No image selected
+        </span>
+
+    </div>
+
+    <div class="preview-container">
+
+        <img
+            id="previewImage"
+            alt="Image preview"
+        >
+
+        <canvas id="faceCanvas"></canvas>
+
+    </div>
+
+    <button id="detectButton">
+        Detect Faces
+    </button>
+
+    <div id="status">
+        Waiting for image...
+    </div>
+
+    <div id="result"></div>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
